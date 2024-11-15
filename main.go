@@ -3,10 +3,11 @@ package escpos
 import (
 	"bufio"
 	"fmt"
-	"github.com/qiniu/iconv"
 	"image"
 	"io"
 	"math"
+
+	"github.com/qiniu/iconv"
 )
 
 type Style struct {
@@ -424,6 +425,16 @@ func (e *Escpos) LineSpacing(p uint8) (int, error) {
 // Initializes the printer to the settings it had when turned on
 func (e *Escpos) Initialize() (int, error) {
 	return e.WriteRaw([]byte{esc, '@'})
+}
+
+// Disables Kanji mode on the printer
+func (e *Escpos) DisableKanjiMode() (int, error) {
+	return e.WriteRaw([]byte{fs, 0x2E})
+}
+
+// Selects code page
+func (e *Escpos) SelectCodePage(codePage uint8) (int, error) {
+	return e.WriteRaw([]byte{esc, 116, codePage})
 }
 
 // Sets the horizontal (x) and vertical (y) motion units to 1/x inch and 1/y inch. Well... According to the manual anyway. You may not want to use this, as it does not seem to do the same on an Epson TM-20II
