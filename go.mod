@@ -1,5 +1,5 @@
-module github.com/hennedo/escpos
+module github.com/colde/escpos
 
-go 1.14
+go 1.23
 
 require github.com/qiniu/iconv v1.2.0
