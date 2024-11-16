@@ -1,7 +1,4 @@
-# About escpos [![GoDoc](https://godoc.org/github.com/hennedo/escpos?status.svg)](https://godoc.org/github.com/hennedo/escpos)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhennedo%2Fescpos.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fhennedo%2Fescpos?ref=badge_shield)
-[![Go Reference](https://pkg.go.dev/badge/github.com/hennedo/escpos.svg)](https://pkg.go.dev/github.com/hennedo/escpos)
-
+# About escpos
 This is a [Golang](http://www.golang.org/project) package that provides
 [ESC-POS](https://en.wikipedia.org/wiki/ESC/P) library functions to help with
 sending control codes to a ESC-POS thermal printer.
@@ -87,9 +84,7 @@ p.SetConfig(escpos.PrinterConfig(DisableUnderline: true))
 This is a (not complete) list of supported and tested devices.
 
 | Manufacturer | Model    | Styling   | Barcodes | QR Codes | Images |
-| ------------ | -------- | --------- | -------- | -------- | ------ |
+|--------------|----------| --------- | -------- | -------- | ------ |
 | Epson        | TM-T20II | ✅        | ✅        | ✅       | ✅     |
 | Epson        | TM-T88II | ☑️<br/>UpsideDown Printing not supported  | ✅        |        | ✅     |
-
-## License
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhennedo%2Fescpos.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fhennedo%2Fescpos?ref=badge_large)
+| Xprinter     | T80Q     | ✅        | ✅        | ✅       | ✅     |
