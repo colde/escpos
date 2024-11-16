@@ -2,4 +2,4 @@ module github.com/colde/escpos
 
 go 1.23
 
-require github.com/qiniu/iconv v1.2.0
+require golang.org/x/text v0.20.0
